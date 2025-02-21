@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ad Dispenser</title>
+    <script>
+        let ads = ["Buy Now!", "Flash Sale!", "Visit Our Store!", "50% Off!"];
+        let index = 0;
+
+        function rotateAd() {
+            document.getElementById("adDisplay").innerText = ads[index];
+            index = (index + 1) % ads.length;
+        }
+
+        setInterval(rotateAd, 5000);
+    </script>
+</head>
+<body>
+    <h2>Ad Dispenser</h2>
+    <div id="adDisplay" style="font-size: 24px; color: red;">Welcome!</div>
+</body>
+</html>
